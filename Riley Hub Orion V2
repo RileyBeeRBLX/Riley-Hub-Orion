@@ -1,0 +1,9 @@
+local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
+local window = DrRayLibrary:Load("Riley Hub Orion", "Hello!")
+
+local tab = DrRayLibrary.newTab("Infintiy Yield Testing", "string")
+
+tab.newButton("Infinity Yield", "Infinity Yield Fe", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))();
+    print('true')
+end)
