@@ -1,170 +1,51 @@
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Mobile%20Friendly%20Orion')))()
-local Window = OrionLib:MakeWindow({Name = "Riley Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+-- Gui to Lua
+-- Version: 3.2
 
---[[
-Name = <string> - The name of the UI.
-HidePremium = <bool> - Whether or not the user details shows Premium status or not.
-SaveConfig = <bool> - Toggles the config saving in the UI.
-ConfigFolder = <string> - The name of the folder where the configs are saved.
-IntroEnabled = <bool> - Whether or not to show the intro animation.
-IntroText = <string> - Text to show in the intro animation.
-IntroIcon = <string> - URL to the image you want to use in the intro animation.
-Icon = <string> - URL to the image you want displayed on the window.
-CloseCallback = <function> - Function to execute when the window is closed.
-]]
-local Tab = Window:MakeTab({
-	Name = "Doors Script",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
+-- Instances:
 
---[[
-Name = <string> - The name of the tab.
-Icon = <string> - The icon of the tab.
-PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
-]]
-Tab:AddButton({
-	Name = "Nerd Hub V5",
-	Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/MrNeRD0/Doors-Hack/main/NeRDV5.lua"))()
-      		print("button pressed")
-  	end    
-})
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextButton = Instance.new("TextButton")
+local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
 
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-Tab:AddButton({
-	Name = "Nerd Hub 2.5V",
-	Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/MrNeRD0/Doors-Hack/main/doorsroomdone.lua"))()
-      		print("button pressed")
-  	end    
-})
+--Properties:
 
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-Tab:AddButton({
-	Name = "Auto A 1000",
-	Callback = function()
-loadstring(game:HttpGet("https://" .. "raw.githubusercontent.com/DaRealGeo/roblox/master/rooms-autowalk"))()
-      		print("button pressed")
-  	end    
-})
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-Tab:AddButton({
-	Name = "BlackKing Hub",
-	Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/KINGHUB01/BlackKing/main/BlackKingMb"))()
-      		print("button pressed")
-  	end    
-})
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
+Frame.BackgroundTransparency = 0.500
+Frame.Position = UDim2.new(0.858712733, 0, 0.0237762257, 0)
+Frame.Size = UDim2.new(0.129513338, 0, 0.227972031, 0)
 
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-Tab:AddButton({
-	Name = "Doors Hub",
-	Callback = function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/zoophiliaphobic/POOPDOORS/main/script.lua'))()
-      		print("button pressed")
-  	end    
-})
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BackgroundTransparency = 1.000
+TextButton.Size = UDim2.new(1, 0, 1, 0)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Example"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextScaled = true
+TextButton.TextSize = 50.000
+TextButton.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextStrokeTransparency = 0.000
+TextButton.TextWrapped = true
+TextButton.MouseButton1Down:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "F6" , false , game)
+end)
 
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-OrionLib:MakeNotification({
-	Name = "Riley Hub",
-	Content = "Riley Hub Has Been Loaded!",
-	Image = "rbxassetid://4483345998",
-	Time = 5
-})
+UITextSizeConstraint.Parent = TextButton
+UITextSizeConstraint.MaxTextSize = 50
 
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Maikderninja/Maikderninja/main/Test.lua"))();
 
---[[
-Title = <string> - The title of the notification.
-Content = <string> - The content of the notification.
-Image = <string> - The icon of the notification.
-Time = <number> - The duration of the notfication.
-]]
-local Tab = Window:MakeTab({
-	Name = "Infinity Yield & Fly Gui V3",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
+local Window = Library.CreateLib("Example", "Sentinel")
 
---[[
-Name = <string> - The name of the tab.
-Icon = <string> - The icon of the tab.
-PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
-]]
-Tab:AddButton({
-	Name = "Infinity Yield",
-	Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))();
-      		print("button pressed")
-  	end    
-})
+local Tab1 = Window:NewTab("Example")
 
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-Tab:AddButton({
-	Name = "Fly Gui V3",
-	Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
-      		print("button pressed")
-  	end    
-})
+local Section1 = Tab1:NewSection("Example")
 
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-local Tab = Window:MakeTab({
-	Name = "Arsenal/Night Edge",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
---[[
-Name = <string> - The name of the tab.
-Icon = <string> - The icon of the tab.
-PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
-]]
-Tab:AddButton({
-	Name = "Arsenal Gun Script",
-	Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/HonestlyDex/DexHub/main/Arsenal"))()
-      		print("button pressed")
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-Tab:AddButton({
-	Name = "Arsenal Teleport Script",
-	Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Innocentallity/Scripts/main/Autovent"))();
-      		print("button pressed")
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-OrionLib:Init()
+Section1:NewKeybind("Toggle ui", "Toggle the ui yes", Enum.KeyCode.F6, function()
+    Library:ToggleUI()
+end)
