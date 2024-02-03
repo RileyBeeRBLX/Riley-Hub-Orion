@@ -40,12 +40,23 @@ UITextSizeConstraint.MaxTextSize = 50
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Maikderninja/Maikderninja/main/Test.lua"))();
 
-local Window = Library.CreateLib("Example", "Sentinel")
+local Window = Library.CreateLib("Riley Hub", "DarkTheme")
 
-local Tab1 = Window:NewTab("Example")
+local Tab1 = Window:NewTab("Riley Hub")
 
-local Section1 = Tab1:NewSection("Example")
+local Section1 = Tab1:NewSection("Slap Battles")
 
-Section1:NewKeybind("Toggle ui", "Toggle the ui yes", Enum.KeyCode.F6, function()
-    Library:ToggleUI()
+Section:NewButton("Auto Hit Eternal Bob", "Auto Hit", function()
+while task.wait(0.1) do local Event = game:GetService("Workspace").bobBoss.DamageEvent Event:FireServer() end
+    print("Clicked")
+end)
+
+Section:NewButton("Slap Battle Script GUI", "Slap Battle GUI", function()
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Slap%20Battles")))()
+    print("Clicked")
+end)
+
+Section:NewButton("Slap Battles (Infinity Yield)", "Slap Battles Infinity Yield", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+    print("Clicked")
 end)
