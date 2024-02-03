@@ -4,29 +4,21 @@ local Window = Library.CreateLib("Riley Hub Orion V4", "DarkTheme")
  
  
 --Plr tabs (done)
-local PlrTab = Window:NewTab("Main Testing")
+local PlrTab = Window:NewTab("Main Script")
 local PlrSection = PlrTab:NewSection("Scripts")
  
 PlrSection:NewButton("Fly Gui V3", "Fly Gui", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
 end)
  
-PlrSection:NewToggle("Disable Gravity", "ToggleInfo", function(state)
-    if state then
-        worksapce.Gravity = 0
-    else
-        worksapce.Gravity = 196.2
-    end
+PlrSection:NewButton("Auto Hit Eternal Bob", "Auto Hit Bob", function()
+while task.wait(0.1) do local Event = game:GetService("Workspace").bobBoss.DamageEvent Event:FireServer() end 
 end)
- 
-PlrSection:NewSlider("Speed", "SliderInfo", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+
+PlrSection:NewButton("Slap Battle GUI", "Slap Battle GUI Script", function()
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Slap%20Battles")))() 
 end)
- 
-PlrSection:NewSlider("Jump Power", "SliderInfo", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
-    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
-end)
- 
+
 -- Others
 local OthersTab = Window:NewTab("Others")
 local OthersSection = OthersTab:NewSection("Scripts")
