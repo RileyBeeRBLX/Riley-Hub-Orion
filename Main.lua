@@ -19,6 +19,10 @@ PlrSection:NewButton("Slap Battle GUI", "Slap Battle GUI Script", function()
 loadstring(game:HttpGet(("https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Slap%20Battles")))() 
 end)
 
+Section:NewButton("ButtonText", "ButtonInfo", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/YellowGreg/Loadstring/main/arsenal4.lua"))()
+end)
+
 -- Others
 local OthersTab = Window:NewTab("Others")
 local OthersSection = OthersTab:NewSection("Scripts")
