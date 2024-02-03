@@ -19,14 +19,9 @@ PlrSection:NewButton("Slap Battle GUI", "Slap Battle GUI Script", function()
 loadstring(game:HttpGet(("https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Slap%20Battles")))() 
 end)
 
-local Section = Tab:NewSection("Arsenal Scripts GUI")
-
 PlrSection:NewButton("Arsenal Script GUI", "Arsenal GUI", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/YellowGreg/Loadstring/main/arsenal4.lua"))()
-end)
-PlrSection:NewButton("Arsenal Teleport GUI", "Teleport GUI (Arsenal Night Edge)", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Innocentallity/Scripts/main/Autovent"))();
-end)
+
 -- Others
 local OthersTab = Window:NewTab("Others")
 local OthersSection = OthersTab:NewSection("Scripts")
