@@ -19,6 +19,10 @@ PlrSection:NewButton("Slap Battle GUI", "Slap Battle GUI Script", function()
 loadstring(game:HttpGet(("https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Slap%20Battles")))() 
 end)
 
+PlrSection:NewButton("Isle 9 Script", "Isle 9 Script GUI", function()
+loadstring(game:HttpGet("https://paste.ee/r/ZynFG/0"))()
+end)
+
 -- Others
 local OthersTab = Window:NewTab("Others")
 local OthersSection = OthersTab:NewSection("Scripts")
