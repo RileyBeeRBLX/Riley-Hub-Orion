@@ -23,6 +23,10 @@ PlrSection:NewButton("Isle 9 Script", "Isle 9 Script GUI", function()
 loadstring(game:HttpGet("https://paste.ee/r/ZynFG/0"))()
 end)
 
+Section:NewButton("NoClip GUI", "NoClip", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/RileyBeeRBLX/Riley-Hub-Orion/main/NoClipScript"))()
+end)
+
 -- Others
 local OthersTab = Window:NewTab("Others")
 local OthersSection = OthersTab:NewSection("Scripts")
