@@ -9,7 +9,7 @@ print("HI")
 end)
  
 KillingCheats:CreateTextbox("TextBox", function(text)
-        print(text)
+print(text)
 end)
  
 KillingCheats:CreateToggle("Auto Ez", function(value)
